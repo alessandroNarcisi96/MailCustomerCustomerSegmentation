@@ -21,7 +21,7 @@ There are 112 females and 88 males.<br/>
 
 If we compare the distribuition against the Spending score we can see that for a low level of Spending score there are more males.<br/> 
 Apart that they are quite similar.<br/> 
-![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)<br/>
+![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore_gender.png)<br/>
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png)<br/>
 //Metti general dist  //By gender //boxplot
