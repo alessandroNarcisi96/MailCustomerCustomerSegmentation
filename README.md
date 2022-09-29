@@ -24,7 +24,7 @@ Apart that they are quite similar.<br/>
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore_gender.png)<br/>
 <p align="center">
-  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png" width="400" height="300" alt="Sublime's custom image"/>
 </p>
 
 
@@ -37,4 +37,6 @@ Let's group the income in range.<br/>
 The small green triangle shows the mean and as we can see all the means are very close each other.<br/> 
 We can conclude that the income is not a powerfull predictor to divide people in cluster but if we compare the variability of the 0,3 and 4 boxplot is very small.<br/> 
 This could be interesting because it could mean that in those case there are some specific characteritics.<br/> 
-![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/IncomeRange.png)<br/>
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/IncomeRange.png" alt="Sublime's custom image"/>
+</p>
