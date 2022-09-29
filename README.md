@@ -23,8 +23,9 @@ If we compare the distribuition against the Spending score we can see that for a
 Apart that they are quite similar.<br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore_gender.png)<br/>
-![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png)<br/>
-//Metti general dist  //By gender //boxplot
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png" alt="Sublime's custom image"/>
+</p>
 
 
 ### Does Age affects the Spending Score?
