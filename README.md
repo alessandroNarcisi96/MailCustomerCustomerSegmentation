@@ -46,3 +46,33 @@ This could be interesting because it could mean that in those cases there are so
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/IncomeRange.png" alt="Sublime's custom image"/>
 </p>
+
+## Milestone 2: Clustering
+A very common algorithm to divide the datapoints in clusters is KMeans.<br/>
+The image below explains the effect.<br/>
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster.png" alt="Sublime's custom image"/>
+</p>
+Basically the goal is dividing data in groups.<br/>
+Inside of each cluster we find the centre of the cluster called centroid.<br/>
+
+### How many clusters?
+In this algorithm  we have to decide in advance the number of cluster.<br/>
+Once we found it, KMeans will optimize the grouping by minimizing the sum of squares of the distance of the datapoints from the centroid.<br/><br/>
+
+But the question is still there:how can we find the number of clusters?<br/>
+A very famous method is elbow method.<br/>
+The logic is explained by these lines of code<br/>
+
+![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/code.png)<br/>
+
+we define a raange of cluster and we evaluated which one divide better the datapoints.<br/>
+In this case to measure the goodness I will use the inertia.<br/>
+It is the sum of squared distances of samples to their closest cluster center.<br/><br/>
+
+Let's plot the result
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/elbow.png" alt="Sublime's custom image"/>
+    <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster3d.png" alt="Sublime's custom image"/>
+
+</p>
