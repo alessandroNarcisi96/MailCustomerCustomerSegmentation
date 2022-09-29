@@ -20,23 +20,29 @@ There are 112 females and 88 males.<br/>
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/gender_barplot.png)<br/>
 
 If we compare the distribuition against the Spending score we can see that for a low level of Spending score there are more males.<br/> 
-Apart that they are quite similar.<br/> 
+On the left we see the general distribuition whereas on the left we divide it by gender,red for females and green for males
+As we can see they are quite similar,but the men's distribuition appears more uniform than the female's distribuition<br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore_gender.png)<br/>
+The following boxplot it's important because we compare the mean of two groups.
+It is indicated by the small green arrow.
+They are on the same level so it means that the gender is not enough to cluster the data.
+The only good news is that the lowest spending scores belong to men
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/boxplot_gender.png" width="400" height="300" alt="Sublime's custom image"/>
 </p>
 
 
 ### Does Age affects the Spending Score?
-At the plot shows below people who are younger than 40 years tend to spend more.<br/> 
+As the plot shows below people who are younger than 40 years tend to spend more.<br/> 
+So in this case we have a very good feature to cluster people<br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/Age_SpendingScore.png)<br/>
 
 ### Does Income affects the Spending Score?
 Let's group the income in range.<br/> 
 The small green triangle shows the mean and as we can see all the means are very close each other.<br/> 
 We can conclude that the income is not a powerfull predictor to divide people in cluster but if we compare the variability of the 0,3 and 4 boxplot is very small.<br/> 
-This could be interesting because it could mean that in those case there are some specific characteritics.<br/> 
+This could be interesting because it could mean that in those cases there are some specific characteritics.<br/> 
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/IncomeRange.png" alt="Sublime's custom image"/>
 </p>
