@@ -98,7 +98,7 @@ A good way to solve this problem is perform a feature selection.<br/>
 How can we do that in unsupervised learning?<br/>
 
 A possible answer is PCA.As wikipedia states "This is accomplished by linearly transforming the data into a new coordinate system where (most of) the variation in the data can be described with fewer dimensions than the initial data."<br/>
-Let's see the most important feature then.<br/>
+Let's see the most important features then:<br/>
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/PCA.png" alt="Sublime's custom image"/>
 </p>
@@ -118,3 +118,34 @@ Visually speaking the clusters are the following:
 </p>
 
 ## Milestone 3: Final Considerations
+So basically we have now 5 clusters.<br/>
+### Gender
+Let'see how the gender is distribuited:
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_gender.png" alt="Sublime's custom image"/>
+</p>
+
+It is very interesting as we can see that in cluster 1,2 are mostly male whereas in cluster 3,4,5 are mostly females.<br/>
+
+### Age
+
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_age.png" alt="Sublime's custom image"/>
+</p>
+
+
+
+### Income
+
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_income.png" alt="Sublime's custom image"/>
+</p>
+
+
+
+### Spending score
+
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_spending.png" alt="Sublime's custom image"/>
+</p>
+
