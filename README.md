@@ -149,3 +149,34 @@ It is very interesting as we can see that in cluster 1,2 are mostly male whereas
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_spending.png" alt="Sublime's custom image"/>
 </p>
 
+## Milestone 4: People behind the clusters
+
+### Cluster 1
+In this case we have mostly males with an age around 55 and with a good income.<br/>
+The spending score is quite low.<br/>
+That probably means that they have a family or they are preparing their finance to the retirement.<br/>
+It could be appealing for them offers to save money.<br/>
+
+### Cluster 2
+In this case we have mostly males with an age around 30 and with a very high income.<br/>
+The spending score is high.<br/>
+It sound conceivable as they are young and likely they will use their money to enjoy the life.<br/>
+It could be appealing for them offers about travelling,clothes and cars.<br/>
+
+### Cluster 3
+In this case we have mostly females with an age around 45 and with a medium income.<br/>
+The spending score is low.<br/>
+It is not so easy to explain but maybe they have a family and they are more interested to save money.<br/>
+It could be appealing for them offers about family items.<br/>
+
+### Cluster 4
+In this case we have mostly females with an age around 25 and with a low income.<br/>
+The spending score is very high.<br/>
+it is similar to cluster 2 but in this case the income is low.<br/>
+So the offers to present will be tailored on something affordable to this kind of people.<br/>
+
+### Cluster 5
+In this case we have mostly females with an age around 25 and with a good income.<br/>
+The spending score is medium.<br/>
+The beaviour is slightly different.<br/>
+Maybe they prefer to spend less to save money to buy something more important like a house<br/>
