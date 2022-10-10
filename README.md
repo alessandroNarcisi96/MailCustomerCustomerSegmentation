@@ -66,13 +66,55 @@ The logic is explained by these lines of code<br/>
 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/code.png)<br/>
 
-we define a raange of cluster and we evaluated which one divide better the datapoints.<br/>
-In this case to measure the goodness I will use the inertia.<br/>
+We define a range of cluster and we evaluated which one divide better the datapoints.<br/>
+In this case to measure the goodness I will use inertia.<br/>
 It is the sum of squared distances of samples to their closest cluster center.<br/><br/>
 
 Let's plot the result
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/elbow.png" alt="Sublime's custom image"/>
-    <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster3d.png" alt="Sublime's custom image"/>
-
 </p>
+
+How can we use this result?<br/>
+As we can see the inertia gets lower when we increase the number of clusters but with a different slope.<br/>
+The elbow method helps us to choose a small value of k that still has a low SSE.<br/>
+Keeping the number of k low is essential to ensure a well-generalized method<br/>
+So in this case the number will be 4.<br/><br/>
+
+Let's plot the clusters.
+As we can see is a good result.
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster3d.png" alt="Sublime's custom image"/>
+</p>
+
+Can we measure the outcome?<br/>
+One possible metric is called silhouette_score and it is a good way to evaluate the coherence and separation of the clusterization.<br/> 
+
+The silhouette_score in this case is 0.56.
+
+### Feature Selection
+Since KMeans relies on distance to find clusters it suffers noise in data a lot.<br/>
+A good way to solve this problem is perform a feature selection.<br/>
+How can we do that in unsupervised learning?<br/>
+
+A possible answer is PCA.As wikipedia states "This is accomplished by linearly transforming the data into a new coordinate system where (most of) the variation in the data can be described with fewer dimensions than the initial data."<br/>
+Let's see the most important feature then.<br/>
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/PCA.png" alt="Sublime's custom image"/>
+</p>
+
+As we can see just 2 features are responsible of more than 75% of variance<br/>
+Let's train KNN again but this time by taking into account only these 2 features<br/>
+The result is :
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/elbow2.png" alt="Sublime's custom image"/>
+</p>
+
+The silhouette_score in this case is 0.68.<br/>
+
+Visually speaking the clusters are the following:
+<p align="center">
+  <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster3d2.png" alt="Sublime's custom image"/>
+</p>
+
+## Milestone 3: Final Considerations
