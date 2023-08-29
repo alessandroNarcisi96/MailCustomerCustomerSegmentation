@@ -9,19 +9,19 @@ Spending Score is something you assign to the customer based on your defined par
 ## Why could it be useful for a company?
 Customer segmentation is an excellent way to gain insight into the market landscape.<br/> 
 Customer segmentation is all about grouping customers into segments based on shared qualities or characteristics.<br/>
-Once we have this information a company could lead more effective market campaign as they are built on a specific target.
+Once we have this information a company could lead a more effective market campaign as they are built on a specific target.
 
 ## Milestone 1: EDA
 
-### Does Gender affects the Spending Score?
+### Does Gender Affect the Spending Score?
 Let's get started by describing the proportion between males and females.<br/> 
 As we can see the dataset is quite balanced.<br/> 
 There are 112 females and 88 males.<br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/gender_barplot.png)<br/>
 
-If we compare the distribuition against the Spending score we can see that for a low level of Spending score there are more males.<br/> 
-On the left we see the general distribuition whereas on the left we divide it by gender,red for females and green for males
-As we can see they are quite similar,but the men's distribuition appears more uniform than the female's distribuition<br/> 
+If we compare the distribution against the Spending score we can see that for a low level of Spending score, there are more males.<br/> 
+On the left, we see the general distribution whereas on the left we divide it by gender, red for females and green for males
+As we can see they are quite similar, but the men's distribution appears more uniform than the female's distribution <br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore.png)
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/spendingScore_gender.png)<br/>
 The following boxplot it's important because we compare the mean of two groups.
@@ -33,16 +33,16 @@ The only good news is that the lowest spending scores belong to men
 </p>
 
 
-### Does Age affects the Spending Score?
+### Does Age Affect the Spending Score?
 As the plot shows below people who are younger than 40 years tend to spend more.<br/> 
 So in this case we have a very good feature to cluster people<br/> 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/Age_SpendingScore.png)<br/>
 
-### Does Income affects the Spending Score?
+### Does Income affect the Spending Score?
 Let's group the income in range.<br/> 
-The small green triangle shows the mean and as we can see all the means are very close each other.<br/> 
-We can conclude that the income is not a powerfull predictor to divide people in cluster but if we compare the variability of the 0,3 and 4 boxplot is very small.<br/> 
-This could be interesting because it could mean that in those cases there are some specific characteritics.<br/> 
+The small green triangle shows the mean and as we can see all the means are very close to each other.<br/> 
+We can conclude that income is not a powerful predictor to divide people into clusters but if we compare the variability of the 0,3 and 4 boxplot is very small.<br/> 
+This could be interesting because it could mean that in those cases there are some specific characteristics.<br/> 
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/IncomeRange.png" alt="Sublime's custom image"/>
 </p>
@@ -53,20 +53,20 @@ The image below explains the effect.<br/>
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster.png" alt="Sublime's custom image"/>
 </p>
-Basically the goal is dividing data in groups.<br/>
-Inside of each cluster we find the centre of the cluster called centroid.<br/>
+Basically, the goal is dividing data into groups.<br/>
+Inside each cluster we find the center of the cluster called the centroid.<br/>
 
 ### How many clusters?
-In this algorithm  we have to decide in advance the number of cluster.<br/>
-Once we found it, KMeans will optimize the grouping by minimizing the sum of squares of the distance of the datapoints from the centroid.<br/><br/>
+In this algorithm,  we have to decide in advance the number of clusters.<br/>
+Once we find it, KMeans will optimize the grouping by minimizing the sum of squares of the distance of the data points from the centroid.<br/><br/>
 
-But the question is still there:how can we find the number of clusters?<br/>
-A very famous method is elbow method.<br/>
+But the question is still there: how can we find the number of clusters?<br/>
+A very famous method is the elbow method.<br/>
 The logic is explained by these lines of code<br/>
 
 ![alt text](https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/code.png)<br/>
 
-We define a range of cluster and we evaluated which one divide better the datapoints.<br/>
+We define a range of clusters and we evaluated which one divides better the datapoints.<br/>
 In this case to measure the goodness I will use inertia.<br/>
 It is the sum of squared distances of samples to their closest cluster center.<br/><br/>
 
@@ -94,7 +94,7 @@ The silhouette_score in this case is 0.56.
 
 ### Feature Selection
 Since KMeans relies on distance to find clusters it suffers noise in data a lot.<br/>
-A good way to solve this problem is perform a feature selection.<br/>
+A good way to solve this problem is to perform a feature selection.<br/>
 How can we do that in unsupervised learning?<br/>
 
 A possible answer is PCA.As wikipedia states "This is accomplished by linearly transforming the data into a new coordinate system where (most of) the variation in the data can be described with fewer dimensions than the initial data."<br/>
@@ -103,7 +103,7 @@ Let's see the most important features then:<br/>
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/PCA.png" alt="Sublime's custom image"/>
 </p>
 
-As we can see just 2 features are responsible of more than 75% of variance<br/>
+As we can see just 2 features are responsible for more than 75% of variance<br/>
 Let's train KNN again but this time by taking into account only these 2 features<br/>
 The result is :
 <p align="center">
@@ -120,12 +120,12 @@ Visually speaking the clusters are the following:
 ## Milestone 3: Final Considerations
 So basically we have now 5 clusters.<br/>
 ### Gender
-Let'see how the gender is distribuited:
+Let'see how the gender is distributed:
 <p align="center">
   <img src="https://github.com/alessandroNarcisi96/MailCustomerCustomerSegmentation/blob/master/images/cluster_gender.png" alt="Sublime's custom image"/>
 </p>
 
-It is very interesting as we can see that in cluster 1,2 are mostly male whereas in cluster 3,4,5 are mostly females.<br/>
+It is very interesting as we can see that in cluster 1,2 are mostly males whereas in cluster 3,4,5 are mostly females.<br/>
 
 ### Age
 
@@ -152,31 +152,31 @@ It is very interesting as we can see that in cluster 1,2 are mostly male whereas
 ## Milestone 4: People behind the clusters
 
 ### Cluster 1
-In this case we have mostly males with an age around 55 and with a good income.<br/>
+In this case, we have mostly males with an age around 55 and with a good income.<br/>
 The spending score is quite low.<br/>
-That probably means that they have a family or they are preparing their finance to the retirement.<br/>
-It could be appealing for them offers to save money.<br/>
+That probably means that they have a family or they are preparing their finance to retirement.<br/>
+It could be appealing for them to make an offer to save money.<br/>
 
 ### Cluster 2
-In this case we have mostly males with an age around 30 and with a very high income.<br/>
+In this case, we have mostly males with an age around 30 and with a very high income.<br/>
 The spending score is high.<br/>
-It sound conceivable as they are young and likely they will use their money to enjoy the life.<br/>
-It could be appealing for them offers about travelling,clothes and cars.<br/>
+It sounds conceivable as they are young and likely they will use their money to enjoy life.<br/>
+It could be appealing for them to make an offer about traveling, clothes and cars.<br/>
 
 ### Cluster 3
 In this case we have mostly females with an age around 45 and with a medium income.<br/>
 The spending score is low.<br/>
-It is not so easy to explain but maybe they have a family and they are more interested to save money.<br/>
-It could be appealing for them offers about family items.<br/>
+It is not so easy to explain but maybe they have a family and they are more interested in saving money.<br/>
+It could be appealing for them to make an offer about family items.<br/>
 
 ### Cluster 4
 In this case we have mostly females with an age around 25 and with a low income.<br/>
 The spending score is very high.<br/>
 it is similar to cluster 2 but in this case the income is low.<br/>
-So the offers to present will be tailored on something affordable to this kind of people.<br/>
+So the offers to present will be tailored to something affordable to this kind of people.<br/>
 
 ### Cluster 5
 In this case we have mostly females with an age around 25 and with a good income.<br/>
 The spending score is medium.<br/>
-The beaviour is slightly different.<br/>
+The behavior is slightly different.<br/>
 Maybe they prefer to spend less to save money to buy something more important like a house<br/>
